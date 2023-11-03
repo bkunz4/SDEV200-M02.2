@@ -1,11 +1,9 @@
-// Implement Triangle class
-public class Triangle 
-    extends GeometricObject {
+public class Triangle extends GeometricObject {
   private double side1;
   private double side2;
   private double side3;
 
-  /** Construct default Triangle object */
+  // Construct default Triangle object
   Triangle() {
     side1 = side2 = side3 = 1.0;
   }
