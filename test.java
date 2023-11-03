@@ -1,19 +1,34 @@
+import java.util.Scanner;
+
 public class test {
-public static void main(String[] args) {
-  
-//creates object
-Triangle my = new Triangle(1,1.5,1,"yellow", true);
+	public static void main(String[] args) {
+		//creates a Scanner object
+		Scanner input = new Scanner(System.in);
 
-//calls method to get the area 
-System.out.println("The area of triangle is " +my.getArea());
+		//asks the user to enter three sides of the triangle
+		System.out.print("Enter three side of the triangle: ");
+		double side1 = input.nextDouble();		
+		double side2 = input.nextDouble();		
+		double side3 = input.nextDouble();
 
-//calls method to get the perimeter 
-System.out.println("The perimeter of triangle is " +my.getPerimeter());
+		//asksthe user to enter a color
+		System.out.print("Enter a color: ");
+		String color = input.next();
 
-//calls getter method getColor()
-System.out.println("The color of the triangle is " +my.getColor());
+		//asks the user to enter whether the triangle is filled
+		System.out.print("Is the triangle filled (true / false)? ");
+		boolean filled = input.nextBoolean();
 
-//calls getter method isFilled()
-System.out.println("Triangle is filled? " +my.isFilled());
-}
+		//creates a triangle object with user input
+		Triangle triangle = new Triangle(side1, side2, side3);
+		triangle.setColor(color);
+		triangle.setFilled(filled);
+
+		System.out.println(triangle.toString());
+		System.out.println("Area: " + triangle.getArea());
+		System.out.println("Perimeter: " + triangle.getPerimeter());
+		System.out.println("Color: " + triangle.getColor());
+		System.out.println("Triangle is" + (triangle.isFilled() ? "" : " not ") 
+			+ "filled");
+	}
 }
