@@ -2,7 +2,8 @@ import java.util.Scanner;
 
 public class test {
 	public static void main(String[] args) {
-		//creates a Scanner object
+		
+    //creates a Scanner object
 		Scanner input = new Scanner(System.in);
 
 		//asks the user to enter three sides of the triangle
@@ -11,7 +12,7 @@ public class test {
 		double side2 = input.nextDouble();		
 		double side3 = input.nextDouble();
 
-		//asksthe user to enter a color
+		//asks the user to enter a color
 		System.out.print("Enter a color: ");
 		String color = input.next();
 
@@ -28,7 +29,7 @@ public class test {
 		System.out.println("Area: " + triangle.getArea());
 		System.out.println("Perimeter: " + triangle.getPerimeter());
 		System.out.println("Color: " + triangle.getColor());
-		System.out.println("Triangle is" + (triangle.isFilled() ? "" : " not ") 
+		System.out.println("Triangle is" + (triangle.isFilled() ? " " : " not ") 
 			+ "filled");
 	}
 }

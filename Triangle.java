@@ -41,12 +41,12 @@ public class Triangle extends GeometricObject {
     this.side2 = side2;
   }
 
-/*getter method for side3*/
+//getter method for side3
   public double getSide3() {
    return side3;
   }
 
-/*setter method for side3*/
+//setter method for side3
   public void setSide3(double side3) {
     this.side3 = side3;
   }
@@ -55,20 +55,20 @@ public class Triangle extends GeometricObject {
    System.out.println(side1+","+side2+","+side3+",");
   }
 
-/* method to calculate area of triangle */
+//method to calculate area of triangle
   public double getArea(){
     double s=(side1+side2+side3)/2;
     double area=s*(s-side1)*(s-side2)*(s-side3);
     return area;
   }
 
-/* method to calculate perimeter of triangle */
+//method to calculate perimeter of triangle
   public double getPerimeter(){
    return (side1 + side2 + side3);
   }
 
-/*toString method that returns string representing sides of triangle*/
-  public String toString(){
+//toString method that returns string representing sides of triangle
+  public String toString() {
     super.toString();
     return "Triangle: side1 = " + side1 + " side2 = " + side2 +
     " side3 = " + side3;
